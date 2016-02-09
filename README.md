@@ -24,6 +24,8 @@ To test an existing model:
 
     $ python main.py --dataset duc2014 --forward_only True
 
+(This is still in progress and stucked by having no access to all of summarization datasets..)
+
 
 References
 ----------
