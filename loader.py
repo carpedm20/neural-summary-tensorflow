@@ -17,5 +17,12 @@ class Loader(object):
     title_fname = os.path.join(self.dataset_dir, self.dataset, title_fname)
     articles_fname = os.path.join(self.dataset_dir, self.dataset, article_fname)
 
-    self.article_dict = get_dictionary(title_fname)
-    import ipdb; ipdb.set_trace() 
+    dict_fname = os.path.join(self.dataset_dir, self.dataset, "dict")
+
+    if not os.path.exists(dict_fname):
+      self.article_dict = get_dictionary(title_fname)
+
+    self.build_article_matrices()
+
+  def build_article_matrices():
+    pass
